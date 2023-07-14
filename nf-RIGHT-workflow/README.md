@@ -1,4 +1,4 @@
-# The RIGHT Pipeline
+# The RIGHT Workflow
 
 This is an ALL Fusion calling pipeline that uses `Nextflow` (DSL2).
 
