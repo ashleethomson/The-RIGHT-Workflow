@@ -61,7 +61,7 @@ Use the following command to run the pipeline:
 nextflow run \
     main.nf \
     -profile slurm,conda \
-    -N email@gmail.com \
+    -N email@email.com \
     --outdir ./outdir \
     --samplesheet <path>/test.csv \
     --email email@gmail.com \
