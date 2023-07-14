@@ -11,7 +11,7 @@ $ git clone --recurse-submodules https://github.com/ashleethomson/The-RIGHT-Work
 ```
 
 ## Download Reference genomes
-To reproduce the results from "Reproducible bioinformatics analysis workflows for detecting Immunoglobulin Heavy Chain (IGH) gene fusions in B-cell acute lymphoblastic leukaemia patients", please run the `./DownloadGenome.sh` script in nf-RIGHT-Workflow to genome files used.
+To reproduce the results from "Reproducible bioinformatics analysis workflows for detecting Immunoglobulin Heavy Chain (IGH) gene fusions in B-cell acute lymphoblastic leukaemia patients", please run the `./DownloadGenome.sh` script in `nf-RIGHT-Workflow` to genome files used.
 
 ```bash
 ./DownloadGenome.sh
