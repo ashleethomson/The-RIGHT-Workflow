@@ -51,7 +51,7 @@ Implicit workflow: Run the QC-pipeline
 ################################################################################
 */
 
-include { fusions } from './workflows/fusion-calling.nf' params(checked_arg_map)
+include { fusions } from './workflows/RIGHT-workflow.nf' params(checked_arg_map)
 
 workflow {  
   fusions(
