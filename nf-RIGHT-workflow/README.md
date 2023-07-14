@@ -7,7 +7,7 @@ This is an ALL Fusion calling pipeline that uses `Nextflow` (DSL2).
 Clone the repository to your system:
 
 ```bash
-$ git clone --recurse-submodules https://github.com/ashleethomson/The-RIGHT-Workflow.git
+$ git clone https://github.com/ashleethomson/The-RIGHT-Workflow.git
 ```
 
 ## Download Reference genomes
