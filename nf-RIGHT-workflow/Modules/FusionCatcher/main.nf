@@ -1,8 +1,8 @@
-process fusioncatcher_v133 {
+process fusioncatcher {
 
-    tag { "fusioncatcher_v133 - ${filename}" } 
+    tag { "fusioncatcher - ${filename}" } 
     publishDir "${outdir}/${group}/${filename}/fusioncatcher_v133", mode: 'copy'
-    label 'process_fusioncatcher_v133'
+    label 'process_fusioncatcher'
 
     input:
     tuple val(filename), val(group), val(sample), val(path), file(reads)
@@ -10,9 +10,9 @@ process fusioncatcher_v133 {
     val outdir
      
     output:
-    file "${filename}_fusioncatcher_v133.txt"
-    file "${filename}_fusioncatcher_v133_hg38.txt"
-    file "${filename}_fusioncatcher_v133_sequences.txt.zip"
+    file "${filename}_fusioncatcher.txt"
+    file "${filename}_fusioncatcher_hg38.txt"
+    file "${filename}_fusioncatcher_sequences.txt.zip"
 
     script:
     """
@@ -23,8 +23,8 @@ process fusioncatcher_v133 {
         -o \${PWD} \
         --skip-blat
 			
-	mv final-list_candidate-fusion-genes.hg19.txt ${filename}_fusioncatcher_v133.txt
-	mv final-list_candidate-fusion-genes.txt ${filename}_fusioncatcher_v133_hg38.txt
-	mv final-list_candidate-fusion-genes_sequences.txt.zip ${filename}_fusioncatcher_v133_sequences.txt.zip
+	mv final-list_candidate-fusion-genes.hg19.txt ${filename}_fusioncatcher.txt
+	mv final-list_candidate-fusion-genes.txt ${filename}_fusioncatcher_hg38.txt
+	mv final-list_candidate-fusion-genes_sequences.txt.zip ${filename}_fusioncatcher_sequences.txt.zip
     """
 }

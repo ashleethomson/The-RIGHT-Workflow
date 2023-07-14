@@ -4,9 +4,9 @@ RNA-seq fusion calling with new programs
 */
 
 // Import processes used by sub-workflow
-include { arriba } from './../modules/arriba/2.1.0/Arriba'
-include { starFusion } from './../modules/STARFusion/1.10.0/star-fusion'
-include { fusioncatcher_v133 } from './../modules/fusioncatcher/1.33/fusioncatcher'
+include { arriba } from './../modules/Arriba/main.nf'
+include { starFusion } from './../modules/STAR-Fusion/main.nf'
+include { fusioncatcher } from './../modules/FusionCatcher/main.nf'
 
 /*
 Call the sub-workflow: fusions

@@ -7,7 +7,7 @@
 #SBATCH --mail-user=<email>
 #SBATCH --mail-type=END
 #SBATCH --mail-type=FAIL
-#SBATCH --output=/path/to/log/directory/<str>.log
+#SBATCH --output=/path/to/log/directory/TheRIGHTworkflow.log
 
 ## Resources allocation request parameters
 #SBATCH --nodes=1
@@ -25,7 +25,7 @@ SAMPLESHEET_DIR=${BASE}/samplesheets
 
 ## Variables
 NF_MAIN=nf-RIGHT-workflow/main.nf
-EMAIL=<yourEmail@email.com>
+EMAIL=email@email.com
 
 ##### VARIABLE PARAMETERS CHANGE WITH EACH RUN #######
 ## DATE must be same format as samplesheet
@@ -41,6 +41,6 @@ nextflow run \
     --samplesheet ${SAMPLESHEET_DIR}/samplesheet_${DATE}.csv \
     --email ${EMAIL} \
     -qs ${QUEUE} \
-    --genome /path/to/genome\
+    --genome /path/to/genome \
     --annotation /path/to/annotation \
     --workDir <str>

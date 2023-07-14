@@ -11,9 +11,7 @@ $ git clone --recurse-submodules https://github.com/sagc-bioinformatics/nf-gene-
 ```
 
 ## Download Reference genomes
-If you are attempting to reproduce the results from "Reproducible bioinformatics analysis workflows for detecting Immunoglobulin Heavy Chain (IGH) gene fusions in B-cell acute lymphoblastic leukaemia patients", please download use these genome files, as they are the ones used for the paper.
-
-If you already have access to a reference genome and annotation file of choice and are doing your own analysis, feel free to skip this step. 
+To reproduce the results from "Reproducible bioinformatics analysis workflows for detecting Immunoglobulin Heavy Chain (IGH) gene fusions in B-cell acute lymphoblastic leukaemia patients", please download use these genome files, as they are the ones used for the paper.
 
 ```bash
 ./DownloadGenome.sh
