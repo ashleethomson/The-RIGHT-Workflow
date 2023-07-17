@@ -39,11 +39,11 @@ path,group,sample,filename,R1,R2
 
 The columns are as follows:
 
-- **path** = Path to parent directory of all ALL Fastq files
-- **group** = Age group that sample belongs to e.g. _AYAII_
-- **sample** = Sample identifier e.g. _AYAII_0001_
-- **filename** = Fastq file basename e.g. _AYAII-0001-DIA1-PB_
-- **R1/R2** = Fastq filename (e.g `AYAII-0001-DIA1-PB_R1.fastq.gz`)
+- **path** = Path to parent directory of Fastq files
+- **group** = Age group that sample belongs to e.g. _GROUP_
+- **sample** = Sample identifier e.g. _TEST-0001_
+- **filename** = Fastq file basename e.g. _TEST-0001-XT_
+- **R1/R2** = Fastq filename (e.g `TEST-0001-XT_1.fastq.gz`)
 
 
 ### 2. Run the Pipeline
