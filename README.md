@@ -10,20 +10,20 @@ Clone the repository to your system:
 $ git clone https://github.com/ashleethomson/The-RIGHT-Workflow.git
 ```
 
-## Download Reference genomes
-To reproduce the results from "Reproducible bioinformatics analysis workflows for detecting Immunoglobulin Heavy Chain (IGH) gene fusions in B-cell acute lymphoblastic leukaemia patients", please run the `./DownloadGenome.sh` script in `nf-RIGHT-Workflow` to genome files used.
+## Reference genomes
+The GRCh37 reference genome and annotation was used for "Reproducible bioinformatics analysis workflows for detecting _IGH_ gene fusions in B-cell acute lymphoblastic leukaemia patients". To replicate the results found in this paper, please use this genome as well.   
 
+Reference libraries for each algorithm will need to be downloaded from their respective sources for this pipeline, as seen in the `nextflow.config` file, and a STAR Index needs to be created. You will have to install STAR to create the Index. STAR version 2.7.9a was used in the pipeline.  
+
+The STAR Index used was created using the following parameters:
 ```bash
-./DownloadGenome.sh
-```
-
-## Build Reference Libraries
-
-
-Run the `BuildReferenceLibraries.sh` script to build the libraries for Arriba, STAR-Fusion, and FusionCatcher.
-
-```bash
-./BuildReferenceLibraries.sh
+STAR \
+    --runMode genomeGenerate \
+    --runThreadN 16 \
+    --genomeDir star-2.7.9a-75bp \
+    --genomeFastaFiles GRCh37.fa \
+    --sjdbGTFfile ref-transcripts.gtf \
+    --sjdbOverhang 74
 ```
 
 ## Usage
@@ -45,13 +45,6 @@ The columns are as follows:
 - **filename** = Fastq file basename e.g. _AYAII-0001-DIA1-PB_
 - **R1/R2** = Fastq filename (e.g `AYAII-0001-DIA1-PB_R1.fastq.gz`)
 
-The `group` and `sample` values are sub directories of `path`. The pipeline gets samples
-by building the following `path` internally:
-
-```text
-|--------------- path --------------| |-group-|  |--sample--|
-/cancer/storage/raw_fastq/ALL/RNAseq/   AYAII/   AYAII_0001/   <fastq reads at this level>
-```
 
 ### 2. Run the Pipeline
 
@@ -65,5 +58,5 @@ nextflow run \
     --outdir ./outdir \
     --samplesheet <path>/test.csv \
     --email email@gmail.com \
-    --partition sahmri_prod_hpc
 ```
+
