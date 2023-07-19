@@ -11,9 +11,9 @@ $ git clone https://github.com/ashleethomson/The-RIGHT-Workflow.git
 ```
 
 ## Reference libraries and genomes
-The GRCh37 reference genome and annotation was used for "Reproducible bioinformatics analysis workflows for detecting _IGH_ gene fusions in B-cell acute lymphoblastic leukaemia patients". To replicate the results found in this paper, please use this genome as well.   
+The GRCh37 reference genome and annotation was used for "Reproducible bioinformatics analysis workflows for detecting _IGH_ gene fusions in B-cell acute lymphoblastic leukaemia patients". To replicate the results found in this paper, please use this version of the genome as well.   
 
-Reference libraries for each algorithm will need to be downloaded from their respective sources for this pipeline, as seen in the `nextflow.config` file, and a STAR Index needs to be created. You will have to install STAR to create the Index. STAR version 2.7.9a was used in the pipeline.  
+Reference libraries for each algorithm will need to be downloaded from their respective sources for this pipeline, as seen in the `nextflow.config` file, and a STAR Index needs to be created. You will have to install STAR to create the Index. STAR version 2.7.9a was used in the manuscript.  
 
 The STAR Index used was created using the following parameters:
 ```bash
