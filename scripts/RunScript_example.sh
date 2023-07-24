@@ -1,22 +1,6 @@
 #!/bin/bash
 
 
-######## Must update job-name and output with date MANUALLY ############
-
-#SBATCH --job-name=TheRIGHTworkflow
-#SBATCH --mail-user=<email>
-#SBATCH --mail-type=END
-#SBATCH --mail-type=FAIL
-#SBATCH --output=/path/to/log/directory/TheRIGHTworkflow.log
-
-## Resources allocation request parameters
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=2
-#SBATCH --mem-per-cpu=40000       # In Mb, this will request 80 Gb of memory
-#SBATCH --time=36:00:00          # Max run time in hh:mm:s
-
-
 ###### BASE PARAMETERS STAY THE SAME BETWEEN RUNS #######
 ## Directories
 BASE=/path/to/The-Right-Workflow
