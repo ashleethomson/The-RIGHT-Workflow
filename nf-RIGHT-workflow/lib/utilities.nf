@@ -50,7 +50,7 @@ def checkAndSetArgs(Map args) {
 
 def printArguments(Map args) {
 
-	required = [ 'outdir', 'email', 'samplesheet', 'genome', 'annotation' 'workDir' ]
+	required = [ 'outdir', 'email', 'samplesheet', 'genome', 'annotation', 'workDir' ]
 	subset_required = args.subMap(required)
 
 	genome = [ 
